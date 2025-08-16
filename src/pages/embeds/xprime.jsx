@@ -66,7 +66,7 @@ const Xprime = () => {
       return {
         source: 'primenet',
         url: data.url,
-        headers: {'origin': 'https://moviebox.ng', 'referer': 'https://moviebox.ng/'},
+        headers: {'origin': 'https://xprime.tv', 'referer': 'https://xprime.tv/'},
         sourceIndex: 0
       };
     }
