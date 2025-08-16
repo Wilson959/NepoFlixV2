@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-[#090a0a] border-t border-white/10 py-8 px-6 mt-12">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
         <div>
-          <h2 className="text-2xl font-semibold text-white">NepoFlix</h2>
+          <h2 className="text-2xl font-semibold text-white"></h2>
           <p className="text-gray-400 mt-1 text-sm">
             All your entertainment. One platform. Free forever.
           </p>
@@ -15,7 +15,7 @@ const Footer = () => {
             href="mailto:nepoflix.contact@gmail.com" 
             className="block mt-2 text-gray-400 hover:text-white transition"
           >
-            wilsondev@gmail.com
+            
           </a>
         </div>
 
