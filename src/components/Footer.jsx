@@ -15,13 +15,13 @@ const Footer = () => {
             href="mailto:nepoflix.contact@gmail.com" 
             className="block mt-2 text-gray-400 hover:text-white transition"
           >
-            nepoflix.contact@gmail.com
+            wilsondev@gmail.com
           </a>
         </div>
 
         <div className="flex space-x-6">
           <a 
-            href="https://github.com/Sandipeyy" 
+            href="#" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="GitHub"
@@ -30,7 +30,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faGithub} className="w-6 h-6" />
           </a>
           <a 
-            href="https://instagram.com/sandipeyy_" 
+            href="#" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Instagram"
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
 
       <div className="max-w-5xl mx-auto mt-6 flex flex-col md:flex-row justify-center items-center text-gray-500 text-xs space-y-2 md:space-y-0 md:space-x-4">        
-        <span>© {new Date().getFullYear()} NepoFlix. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Wilson. All rights reserved.</span>
       </div>
     </footer>
   );
