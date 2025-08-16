@@ -38,7 +38,7 @@ const Xprime = () => {
     }
     
     if (sourceName === 'Fox') {
-      const foxApiUrl = new URL('https://vidrock.net/api/');
+      const foxApiUrl = new URL('https://test.autoembed.cc');
       Object.keys(foxParams).forEach(key => foxApiUrl.searchParams.append(key, foxParams[key]));
       
       const response = await fetch(foxApiUrl);
@@ -48,15 +48,15 @@ const Xprime = () => {
       return {
         source: 'fox',
         url: data.url,
-        headers: {'origin': 'https://vidrock.to', 'referer': 'https://vidrock.to/'},
+        headers: {'origin': 'https://moviebox.ng', 'referer': 'https://moviebox.ng/'},
         sourceIndex: 1
       };
     } else if (sourceName === 'PrimeNet') {
       let primenetApiUrl;
       if (season && episode) {
-        primenetApiUrl = `https://vidrock.net/api/tv/${tmdbid}&season=${season}&episode=${episode}`;
+        primenetApiUrl = `https://test.autoembed.cc/api/server?id=${tmdbid}&season=${season}&episode=${episode}&sr=14`;
       } else {
-        primenetApiUrl = `https://vidrock.net/api/movie/${tmdbid}`;
+        primenetApiUrl = `https://test.autoembed.cc/api/server?id=${tmdbid}&sr=14`;
       }
       
       const response = await fetch(primenetApiUrl);
@@ -66,7 +66,7 @@ const Xprime = () => {
       return {
         source: 'primenet',
         url: data.url,
-        headers: {'origin': 'https://vidrock.to', 'referer': 'https://vidrock.to/'},
+        headers: {'origin': 'https://moviebox.ng', 'referer': 'https://moviebox.ng/'},
         sourceIndex: 0
       };
     }
