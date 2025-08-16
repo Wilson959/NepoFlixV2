@@ -54,9 +54,9 @@ const Xprime = () => {
     } else if (sourceName === 'PrimeNet') {
       let primenetApiUrl;
       if (season && episode) {
-        primenetApiUrl = `https://backend.xprime.tv/primenet?id=${tmdbid}`;
-      } else {
         primenetApiUrl = `https://backend.xprime.tv/primenet?id=${tmdbid}&season=${season}&episode=${episode}`;
+      } else {
+        primenetApiUrl = `https://backend.xprime.tv/primenet?id=${tmdbid}`;
       }
       
       const response = await fetch(primenetApiUrl);
