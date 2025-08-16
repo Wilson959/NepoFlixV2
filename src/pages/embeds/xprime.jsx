@@ -38,7 +38,7 @@ const Xprime = () => {
     }
     
     if (sourceName === 'Fox') {
-      const foxApiUrl = new URL('https://test.autoembed.cc');
+      const foxApiUrl = new URL('https://backend.xprime.tv/fox');
       Object.keys(foxParams).forEach(key => foxApiUrl.searchParams.append(key, foxParams[key]));
       
       const response = await fetch(foxApiUrl);
@@ -48,15 +48,15 @@ const Xprime = () => {
       return {
         source: 'fox',
         url: data.url,
-        headers: {'origin': 'https://moviebox.ng', 'referer': 'https://moviebox.ng/'},
+        headers: {'origin': 'https://xprime.tv', 'referer': 'https://xprime.tv/'},
         sourceIndex: 1
       };
     } else if (sourceName === 'PrimeNet') {
       let primenetApiUrl;
       if (season && episode) {
-        primenetApiUrl = `https://test.autoembed.cc/api/server?id=${tmdbid}&season=${season}&episode=${episode}&sr=14`;
+        primenetApiUrl = `https://backend.xprime.tv/primenet?id=${tmdbid}`;
       } else {
-        primenetApiUrl = `https://test.autoembed.cc/api/server?id=${tmdbid}&sr=14`;
+        primenetApiUrl = `https://backend.xprime.tv/primenet?id=${tmdbid}&season=${season}&episode=${episode}`;
       }
       
       const response = await fetch(primenetApiUrl);
