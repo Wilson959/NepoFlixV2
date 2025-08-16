@@ -54,9 +54,9 @@ const Xprime = () => {
     } else if (sourceName === 'PrimeNet') {
       let primenetApiUrl;
       if (season && episode) {
-        primenetApiUrl = `https://vidrock.net/api/movie/${tmdbid}&season=${season}&episode=${episode}`;
+        primenetApiUrl = `https://vidrock.net/api/tv/${tmdbid}&season=${season}&episode=${episode}`;
       } else {
-        primenetApiUrl = `https://vidrock.net/api/tv/${tmdbid}`;
+        primenetApiUrl = `https://vidrock.net/api/movie/${tmdbid}`;
       }
       
       const response = await fetch(primenetApiUrl);
