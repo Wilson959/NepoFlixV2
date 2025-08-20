@@ -6,7 +6,7 @@ const searchShowbox = async (searchKeyword, proxyUrl) => {
     const response = await fetch(proxyUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({url: `https://retroflix.yellowflash-cloud7775.workers.dev/api/search?q=${encodeURIComponent(searchKeyword)}`, method: 'POST', cf: true, headers: {'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}})
+      body: JSON.stringify({url: `https://retroflix.yellowflash-cloud7775.workers.dev/api/search?q=${encodeURIComponent(title)}`, method: 'POST', cf: true, headers: {'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}})
     });
     
     return await response.text();
@@ -66,7 +66,7 @@ const getShareLink = async (ajaxUrl, ajaxData, proxyUrl) => {
     const response = await fetch(proxyUrl, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({url: `https://www.showbox.media${ajaxUrl}?${params}`, method: 'GET', cf: true, headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}})
+      body: JSON.stringify({url: `https://retroflix.yellowflash-cloud7775.workers.dev${ajaxUrl}?${params}`, method: 'GET', cf: true, headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}})
     });
     
     const responseData = await response.json();
